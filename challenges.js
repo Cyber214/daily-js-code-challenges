@@ -149,8 +149,8 @@ computeRemainder(10.5, 3) //=> 1.5
 -----------------------------------------------------------------------------*/
 // Your solution for 05-computeRemainder:
 
-function computerRemainder(num1, num2) {
-  if(num2 === 0) {
+function computeRemainder(num1, num2) {
+  if (num2 === 0) {
     return Infinity
   } else {
     return num1 % num2
