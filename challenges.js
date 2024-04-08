@@ -182,9 +182,9 @@ range(5,2) //=> "First argument must be less than second"
 
 function range(int1, int2) {
   if (int1 > int2) {
-    return "num 1 must be less"
+    return "First argument must be less than second"
   }
-  const integers = []
+  let integers = []
   for (let i = int1; i < int2; i++) {
     integers.push(i)
   }
