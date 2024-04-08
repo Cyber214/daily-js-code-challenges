@@ -86,9 +86,13 @@ sumNumbers([]) //=> 0
 -----------------------------------------------------------------------------*/
 // Your solution for 03-sumNumbers here:
 
-
-
-
+function sumNumbers(num) {
+  let arraySum = 0
+  for(let i = 0; i < num.length; i++) {
+    arraySum += num[i]
+  }
+  return arraySum
+}
 
 /*-----------------------------------------------------------------------------
 Challenge: 04-addList
@@ -110,9 +114,17 @@ addList(7,-12) //=> -5
 -----------------------------------------------------------------------------*/
 // Your solution for 04-addList here:
 
-
-
-
+function addList(...numbers) {
+  if (numbers.length === 0) {
+    return 0
+  } else {
+    let sum = 0
+    for (let num of numbers) {
+      sum += num
+    }
+    return sum
+  }
+}
 
 /*-----------------------------------------------------------------------------
 Challenge: 05-computeRemainder
