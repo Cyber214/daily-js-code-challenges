@@ -180,9 +180,16 @@ range(5,2) //=> "First argument must be less than second"
 -----------------------------------------------------------------------------*/
 // Your solution for 06-range here:
 
-
-
-
+function range(int1, int2) {
+  if (int1 > int2) {
+    return "num 1 must be less"
+  }
+  const integers = []
+  for (let i = int1; i < int2; i++) {
+    integers.push(i)
+  }
+  return integers
+}
 
 /*-----------------------------------------------------------------------------
 Challenge: 07-reverseUpcaseString
