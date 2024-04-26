@@ -277,8 +277,17 @@ charCount('Today is fantastic!')
 // Your solution for 09-charCount here:
 
 
-
-
+function charCount(str) {
+  const count = {}
+  for (let char of str) {
+    if (count[char] !== undefined) {
+      count[char]++
+    } else {
+      count[char] = 1
+    }
+  }
+  return count
+}
 
 /*-----------------------------------------------------------------------------
 Challenge: 10-formatWithPadding
