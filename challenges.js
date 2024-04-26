@@ -289,6 +289,18 @@ function charCount(str) {
   return count
 }
 
+// function charCount(str) {
+//   const count = {}
+//   for (let i = 0; i < str.length; i++) {
+//     if (count[str[i]] !== undefined) {
+//       count[str[i]]++
+//     } else {
+//       count[str[i]] = 1
+//     }
+//   }
+//   return count
+// }
+
 /*-----------------------------------------------------------------------------
 Challenge: 10-formatWithPadding
 
@@ -315,9 +327,15 @@ formatWithPadding(1234, '*', 3) //=> "1234"
 -----------------------------------------------------------------------------*/
 // Your solution for 10-formatWithPadding here:
 
-
-
-
+function formatWithPadding(num, char, numlength) {
+  const numStr = num.toString()
+  const paddingLength = numlength - numStr.length
+  if (paddingLength <= 0) {
+    return numStr
+  } else {
+    return char.repeat(paddingLength) + numStr
+  }
+}
 
 /*-----------------------------------------------------------------------------
 Challenge: 11-isPalindrome
