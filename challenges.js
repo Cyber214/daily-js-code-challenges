@@ -361,9 +361,13 @@ isPalindrome('') //=> true
 -----------------------------------------------------------------------------*/
 // Your solution for 11-isPalindrome here:
 
-
-
-
+function isPalindrome(str) {
+  const cleanStr = str.toLowerCase().replace(/[\W_]/g, '')
+  if (cleanStr.length <= 1) {
+    return true
+  }
+  return cleanStr === cleanStr.split('').reverse().join('')
+}
 
 /*-----------------------------------------------------------------------------
 Challenge: 12-hammingDistance
@@ -390,8 +394,6 @@ hammingDistance('!!!!', '****') //=> 4
 hammingDistance('abc', 'ab') //=> NaN
 -----------------------------------------------------------------------------*/
 // Your solution for 12-hammingDistance here:
-
-
 
 
 
