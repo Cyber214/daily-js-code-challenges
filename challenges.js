@@ -460,9 +460,23 @@ fromPairs([ ['name', 'Sam"], ['age', 24], ['name', 'Sally'] ]) //=> { name: "Sal
 -----------------------------------------------------------------------------*/
 // Your solution for 14-fromPairs here:
 
+function fromPairs(arr) {
+  let result = {}
+  for ( let i = 0; i < arr.length ; i++ ) {
+    let key = arr[i][0]
+    let value = arr[i][1]
+    result[key] = value
+  }
+  return result
+}
 
-
-
+// function fromPairs(arr) {
+//   let result = {};
+//   for (let pair of arr) {
+//     result[pair[0]] = pair[1];
+//   }
+//   return result;
+// }
 
 /*-----------------------------------------------------------------------------
 Challenge: 15-mergeObjects
