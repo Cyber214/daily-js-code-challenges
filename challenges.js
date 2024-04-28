@@ -431,7 +431,13 @@ mumble('!A 2') //=> '!-AA-   -2222'
 -----------------------------------------------------------------------------*/
 // Your solution for 13-mumble here:
 
-
+function mumble(str) {
+  let result = []
+  for(let i = 0; i < str.lenght; i++) {
+    result.push(str[i].repeat(i + 1))
+  }
+  return result.join('-')
+}
 
 /*-----------------------------------------------------------------------------
 Challenge: 14-fromPairs
