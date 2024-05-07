@@ -552,9 +552,10 @@ findHighestPriced([
 -----------------------------------------------------------------------------*/
 // Your solution for 16-findHighestPriced here:
 
-
-
-
+function findHighestPriced(array) {
+  const sortedArray = array.slice().sort((a, b) => b.price - a.price)
+  return sortedArray.find((obj, index) => index === 0 || obj.price !== sortedArray[index - 1].price)
+}
 
 /*-----------------------------------------------------------------------------
 Challenge: 17-mapArray
@@ -590,9 +591,15 @@ mapArray( ['rose', 'tulip', 'daisy'], function(f, i) {
 -----------------------------------------------------------------------------*/
 // Your solution for 17-mapArray here:
 
-
-
-
+function mapArray(array, callback) {
+  let newArray = []
+  let index = 0
+  for (const element of array) {
+    newArray.push(callback(element, index))
+    index++
+  }
+  return newArray
+}
 
 /*-----------------------------------------------------------------------------
 Challenge: 18-reduceArray
