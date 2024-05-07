@@ -648,8 +648,13 @@ reduceArray( ['Yes', 'No', 'Yes', 'Maybe'], function(acc, v) {
 -----------------------------------------------------------------------------*/
 // Your solution for 18-reduceArray here:
 
-
-
+//used notion video to understand this
+function reduceArray(array, callback, initialValue) {
+  array.forEach((element, index) => {
+    initialValue = callback(initialValue, element, index)
+  })
+  return initialValue
+}
 
 /*-----------------------------------------------------------------------------
 Challenge: 19-isPrime
