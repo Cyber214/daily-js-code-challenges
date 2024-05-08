@@ -679,9 +679,17 @@ isPrime(200) //=> false
 -----------------------------------------------------------------------------*/
 // Your solution for 19-isPrime here:
 
-
-
-
+function isPrime(int) {
+  for(  i = 2 ; i < int - 1 ; i++ ) {
+    if (int % 1 === 0) {
+      return false
+    }
+  }
+  if (int < 2 ||  Math.floor(int) !== int ) {
+    return false
+  }
+  return true
+}
 
 /*-----------------------------------------------------------------------------
 Challenge: 20-intersection
